@@ -1,0 +1,7 @@
+﻿# ignore any extra folders
+*/
+# don't ignore these folders
+!IIS-21/
+!IIS-21/**
+# vim swapfiles
+*.swp

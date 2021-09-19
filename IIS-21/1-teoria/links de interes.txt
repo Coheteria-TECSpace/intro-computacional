@@ -1,0 +1,18 @@
+== Descargar python ==
+https://www.python.org/downloads/
+
+== Algunos editores de texto/IDE ==
+https://code.visualstudio.com/ vscode para windows, mac y linux
+https://www.jetbrains.com/pycharm/download/ pycharm edicion comunidad para windows, mac y linux
+https://www.spyder-ide.org/ spyder para windows y mac
+https://notepad-plus-plus.org/ notepad++ para windows
+
+== Como escribir a un archivo desde python ==
+
+# inicio de codigo
+archivo = open("datos.txt", "w")
+# se puede implementa un ciclo para que escriba todos los datos
+datos = 4
+archivo.write(datos)
+archivo.close()
+# fin de codigo
