@@ -5,3 +5,6 @@
 !IIS-21/**
 # vim swapfiles
 *.swp
+# python bytecode
+__pycache__
+
