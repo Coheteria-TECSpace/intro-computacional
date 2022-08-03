@@ -43,132 +43,100 @@
 \tableofcontents
 \clearpage
 
-\section{Descripción del proyecto}
-El proyecto de computacional evaluará los siguientes tres elementos a construir y programar:
+\section{Descripción general}
+Introducción a cohetería computacional tiene como intención brindarle a los estudiantes una idea
+sobre el conocimiento y trabajo que va detrás de diseñar un sistema computacional para una misión de
+cohetería, esto desde los aspectos de electrónica, programación y un poco de organización de trabajo
+en equipo.
+
+El estudiante que disfrute de esta área y aproveche el curso tendrá herramientas útiles para todo
+momento en programación así como conocimiento general sobre cómo funcionan todos los equipos que nos
+rodean día a día desde el celular en nuestras manos, hasta los chips que envían información desde
+satélites y aparatos espaciales en el espacio exterior.
+
+\section{Objetivos}
+\subsection{Objetivo General}
+Brindar el conocimiento necesario de programación, electrónica y telemetría para llevar a cabo una
+misión de cohetería exitosa, donde se diseñe una computadora para el cohete, una aplicación para
+control de misión y un sistema de recuperación que facilite la misma, así aportando a la misión en
+toda etapa.
+
+\subsection{Objetivos Específicos}
+\begin{enumerate}
+    \item Enseñar los fundamentos detrás de los lenguajes de programación que se usan en la
+        actualidad, así como un trasfondo histórico sobre los mismos.
+    \item Aprender a programar en lenguajes de alto nivel bastante comúnes como lo son Python y
+        Arduino, para poder programar tanto en computadoras comúnes como en microcontroladores.
+    \item Diseñar circuitos básicos con conceptos simples de corriente continua y el uso de
+        microcontroladores programables para automatizar tareas.
+    \item Usar sensores y actuadores según sea necesario para las soluciones de electrónica que se
+        consideren necesarias en los circuitos creados.
+    \item Conocer la teoría de telemetría y poder aplicarla para realizar conexiones inalámbricas y
+        transmisión de datos a distancia en los dispositivos elegidos.
+    \item Programar una aplicación pensada para el uso de un usuario promedio, con funcionalidades
+        útiles o llamativas antes, durante y después del lanzamiento y aterrizaje del cohete.
+    \item Trabajar en conjunto para diseñar un sistema completo e inter funcional de electrónica
+        y programación.
+    \item Ganar conocimiento de programación que pueda ser aplicado a cualquier lenguaje que se
+        encuentren en un futuro en su carrera profesional.
+\end{enumerate}
+
+\clearpage
+\section{Contenidos}
+\subsection{Conocimiento general sobre qué es cohetería computacional}
 \begin{itemize}
-    \item Computadora de vuelo que resida dentro del cohete y esté activa en todo momento del vuelo, 
-        tomando datos que puedan ser analizados.
-    \item Aplicación que el equipo en tierra pueda usar durante el vuelo para monitorear y controlar la computadora de vuelo.
-    \item Sistema que facilite la recuperación del cohete luego del aterrizaje, esto puede ser 
-        integrado a la computadora de vuelo y la aplicación de tierra, o bien puede ser un sistema totalmente aparte.
+    \item Hardware a lo largo de la historia.
+    \item Software a lo largo de la historia.
+    \item Computación en el espacio (NASA y SpaceX).
+    \item Objetivos de cohetería computacional en TECSpace.
+    \item Tecnologías que usamos en TECSpace.
+    \item Ejemplos de proyectos existentes y viables.
+\end{itemize}
+\subsection{Fundamentos tras los lenguajes de programación y sus diferencias}
+\begin{itemize}
+    \item Diferencias entre lenguajes de alto y bajo nivel.
+    \item Paradigmas de progrmación y sus usos.
+    \item Diferencias entre lenguajes compilados e interpretados.
+    \item Compatibilidad de sistemas operativos.
+    \item Compatibilidad de navegadores web.
+    \item Compatibilidad de dispositivos (arquitecturas).
+    \item Pseudocódigo y diagramas de flujo.
+\end{itemize}
+\subsection{Taller básico de programación en Python con enfoque a aprender más lenguajes}
+\begin{itemize}
+    \item Qué son variables detalles y cómo usarlas.
+    \item Instaciación de variables vs declaración de valores.
+    \item Utilidad de funciones, cómo usarlas y sus partes.
+    \item Código estructurado para manejo de pruebas lógicas.
+    \item Ciclos de código do while, y do for.
+    \item Listas en Python sus usos y cómo se diferencian de arrays.
+    \item Cómo importar código de otros archivos en Python (módulos).
+    \item Lectura y escritura de datos en archivos de texto I/O.
+    \item Cómo facilitar el aprendizaje u entendimiento de lenguajes que no conocemos.
 \end{itemize}
 
-\subsection{Computadora de vuelo}
-Debe ser capaz de monitorear el vuelo en tiempo real una o más variables del vuelo, estas quedan a 
-decisión del equipo y preferiblemente que puedan justificar por qué realizaron la elección (costos, 
-análisis de datos, archivación de datos, disponibilidad de sensores, entre otros), algunas variables 
-a considerar pueden ser:
-\begin{itemize}
-    \item Velocidad.
-    \item Aceleración.
-    \item Altitud.
-    \item Temperatura (en zona de interés).
-    \item Vibraciones.
-    \item etc...
-\end{itemize}
+\clearpage
 
-La computadora usará un microcontrolador (queda a elección del equipo cuál usar), el mismo energizado 
-mediante una batería con suficiente capacidad para el tiempo de uso durante los lanzamientos (se
-recomienda la colocación de un interruptor en el exterior del cohete, así permitiendo sólo activar 
-el sistema cuando se tenga que utilizar y no gastar batería cuando no se use).
-
-La computadora de vuelo deberá permitir la comunicación remota para transmisión de datos y recepción 
-de comandos, por lo tanto es importante la elección de un protocolo de comunicación apto para la
-cantidad de datos que se desean transmitir y la distancia máxima que se requiera cubrir.
-
-\subsection{Aplicación de control}
-Permite monitorear en tiempo real los valores desde tierra, esta aplicación puede ser una interfáz 
-gráfica (GUI), una aplicación de terminal (CLI) o bien interfaz de texto (TUI), en cualquier 
-lenguaje o plataforma (Windows, Linux, macOS, Android, iOS, microcontrolador, interfaz web, etc)
-según sea el gusto de los integrantes.
-
-La aplicación deberá conectarse en tiempo real con la computadora de vuelo, por lo tanto el
-protocolo de comunicación usado para la computadora de vuelo deberá también ser considerado para la
-plataforma donde se tendrá esta aplicación pues deberá tener compatibilidad con esta.
-
-Los datos recibidos desde la computadora de vuelo deberán ser almacenados en tiempo real, esto
-quiere decir que justo en el momento que son recibidos y procesados se deben almacenar en la memoria
-del dispositivo, lo que implica que nunca se pierdan los datos recibidos del vuelo, incluso si se 
-terminara la comunicación de manera abrupta, la aplicación se cerrara, o el dispositivo se apagara,
-siempre quedarían los datos guardados en la memoria para análisis futuro.
-
-\subsection{Sistema de recuperación}
-Se promueve la creatividad en este apartado, cada grupo podrá elegir un sistema que facilite la
-recuperación siempre y cuando sea seguro de implementar y primero sea consultado con el profesor del
-curso.
-
-La idea de este sistema consiste en que desde el equipo en tierra, se le pueda enviar al cohete una
-señal o activar un sistema que indique dónde aterrizó el cohete, esto preferiblemente que con una
-sóla activación se mantenga generando una señal fácil de encontrar en medio de ambientes
-complicados, como zacate alto, huecos, detrás de árboles, etc.
-
-Algunos ejemplos que pueden considerar son los siguientes, pero se les insta a ser creativos:
-\begin{itemize}
-    \item Bocina que emita un sonido repetidas veces luego de presionar un botón en la interfaz
-        gráfica de la aplicación de control.
-    \item Botón en un dispositivo de mano que emita constantemente la distancia aproximada entre
-        el cohete y el dispositivo (analizando la intensidad de señal de conexión).
-    \item Sistema que libere humo de una manera totalmente segura que nunca puede salir mal e
-        incendiar el cohete, al escribir un comando en la aplicación de terminal.
-    \item etc...
-\end{itemize}
-
-\section{Evaluación del proyecto}
-La distribución de puntos del proyecto se muestra a continuación, este se evalúa en base 100 y será
-la misma nota para todos los integrantes del grupo de computacional, esto no es igual a la nota
-final del curso pues esta también dependerá de otros factores explicados más adelante en la sección 
-\ref{nota_final}.
-
+\section{Nota final del curso}
+Como se indicó previamente, la nota final del curso para cada estudiante constará tanto de la nota
+grupal del proyecto, como de otros valores, estos se detallan a continuación.
 \begin{table}[h]
     \centering
-    \begin{tabular}{cccc}
+    \begin{tabular}{cc}
         \toprule
-        \multicolumn{2}{c}{Elementos a evaluar} & Valor individual (pts) & Valor total (pts) \\
+            Item a evaluar & Valor del item [\%] \\
         \midrule
-        \bf{Computadora de vuelo} & & - & \multirow{5}{*}{40} \\
-        \multicolumn{2}{l}{Microcontrolador apto para la tarea} & 15 & \\
-        \multicolumn{2}{l}{Uso de sensores y/o actuadores}      & 10 & \\
-        \multicolumn{2}{l}{Comunicación remota funcional}       & 10 & \\
-        \multicolumn{2}{l}{Batería de fácil acceso}             & 5 & \\
-        \midrule
-        \bf{Aplicación de control} & & - & \multirow{4}{*}{40} \\
-        \multicolumn{2}{l}{Interfaz de usuario funcional}       & 20 & \\
-        \multicolumn{2}{l}{Recepción de datos en tiempo real}   & 10 & \\
-        \multicolumn{2}{l}{Almacenamiento en tiempo real}       & 10 & \\
-        \midrule
-        \bf{Sistema de recuperación} & & - & \multirow{4}{*}{20} \\
-        \multicolumn{2}{l}{Activación remota exitosa}           & 8 & \\
-        \multicolumn{2}{l}{Efectividad para encontrar cohete}   & 8 & \\
-        \multicolumn{2}{l}{Creatividad de la solución}          & 4 & \\
-        \midrule
-        \bf{Total} & & & 100 \\
+            Proyecto computacional & 55 \\
+            Coevaluación proyecto  & 10 \\
+            Tareas computacional   & 35 \\
         \bottomrule
     \end{tabular}
 \end{table}
 
-\clearpage
-
-%\section{Nota final del curso}
-%\label{nota_final}
-%Como se indicó previamente, la nota final del curso para cada estudiante constará tanto de la nota
-%grupal del proyecto, como de otros valores, estos se detallan a continuación.
-%\begin{table}[h]
-%    \centering
-%    \begin{tabular}{cc}
-%        \toprule
-%            Item a evaluar & Valor del item [\%] \\
-%        \midrule
-%            Proyecto computacional & 55 \\
-%            Coevaluación proyecto  & 10 \\
-%            Tareas computacional   & 35 \\
-%        \bottomrule
-%    \end{tabular}
-%\end{table}
-%
-%Todo estudiante que obtenga una nota de 70 será considerado aprobado del curso de cohetería
-%computacional, esto significa que podrá participar en los proyectos de TECSpace como integrante y
-%recibirá un reconocimiento por haber aprobado el curso, el cual puede ser usado para demostrar
-%experiencia y dedicación.
+Todo estudiante que obtenga una nota de 70 será considerado aprobado del curso de cohetería
+computacional, esto significa que podrá participar en los proyectos de TECSpace como integrante y
+recibirá un reconocimiento por haber aprobado el curso, el cual puede ser usado para demostrar
+experiencia y dedicación.
 
 \end{document}
 
