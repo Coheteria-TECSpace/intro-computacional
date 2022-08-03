@@ -3,6 +3,8 @@
 # don't ignore these folders
 !IIS-21/
 !IIS-21/**
+!IIS-22/
+!IIS-22/**
 # vim swapfiles
 *.swp
 # binary files
@@ -13,4 +15,10 @@ __pycache__
 *.a
 *.dll
 *.lib
+# pdflatex tmp files
+*.log
+*.toc
+*.aux
+# temporary pdf, not final one
+IIS-22/latex-proyecto/proyecto.pdf
 
