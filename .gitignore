@@ -5,6 +5,10 @@
 !IIS-21/**
 !IIS-22/
 !IIS-22/**
+!latex-curso/
+!latex-curso/**
+!latex-proyecto/
+!latex-proyecto/**
 # vim swapfiles
 *.swp
 # binary files
