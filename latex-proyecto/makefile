@@ -3,7 +3,7 @@
 	pdflatex proyecto.tex
 
 clean:	
-	rm *.log *.toc *.aux
+	rm *.log *.toc *.aux *.out
 
 tlmgr:
 	tlmgr init-usertree
